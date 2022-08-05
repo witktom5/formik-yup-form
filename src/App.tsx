@@ -11,21 +11,13 @@ function App() {
     role: 'user',
   };
 
-  const onSubmit = (values: any) => {
-    const valuesCopy = { ...values };
-    valuesCopy.adresses = values.adresses.filter(
-      (el: any) => el.city !== '' && el.country !== ''
-    );
-    console.log(valuesCopy);
-  };
-
   return (
     <>
       <h1>Form with formik and yup</h1>
       <Formik
         initialValues={initialValues}
         validationSchema={FormSchema}
-        onSubmit={onSubmit}
+        onSubmit={(values) => console.log(values)}
       >
         {({ errors, values, touched, isSubmitting }) => (
           <Form className='form'>
