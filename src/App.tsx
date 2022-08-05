@@ -75,11 +75,6 @@ function App() {
               render={(arrayHelpers) => (
                 <div>
                   <p>Adresses</p>
-                  <ErrorMessage
-                    name='adresses'
-                    component='div'
-                    className='error mb-1'
-                  />
                   {values.adresses && values.adresses.length > 0
                     ? values.adresses.map((adress, i) => (
                         <div key={i} className='adress-container'>
@@ -122,6 +117,15 @@ function App() {
                         </div>
                       ))
                     : ''}
+
+                  {typeof errors.adresses === 'string' ? (
+                    <ErrorMessage
+                      name={'adresses'}
+                      component='div'
+                      className='error mb-1'
+                    />
+                  ) : null}
+
                   <button
                     type='button'
                     onClick={() => arrayHelpers.push({ country: '', city: '' })}
