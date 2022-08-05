@@ -18,6 +18,6 @@ export const FormSchema = Yup.object().shape({
   childrenAmount: Yup.number()
     .required('Enter child amount')
     .min(0, 'Enter positive number'),
-  adresses: Yup.array().of(AdressSchema).min(1),
+  adresses: Yup.array().of(AdressSchema).min(1, 'Enter at least one adress'),
   role: Yup.string().oneOf(['admin', 'user']),
 });

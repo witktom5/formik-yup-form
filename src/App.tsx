@@ -75,6 +75,11 @@ function App() {
               render={(arrayHelpers) => (
                 <div>
                   <p>Adresses</p>
+                  <ErrorMessage
+                    name='adresses'
+                    component='div'
+                    className='error mb-1'
+                  />
                   {values.adresses && values.adresses.length > 0
                     ? values.adresses.map((adress, i) => (
                         <div key={i} className='adress-container'>

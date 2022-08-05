@@ -54,6 +54,10 @@ button {
   transition: all 200ms;
 }
 
+.mb-1 {
+  margin-bottom: 0.5em;
+}
+
 button:hover {
   background-color: hsl(250, 45%, 28%);
 }
