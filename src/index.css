@@ -5,9 +5,91 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(0, 0%, 12%);
+}
+
+* {
+  color: hsl(230, 50%, 90%);
+}
+
+body,
+html {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+form {
+  min-width: 590px;
+}
+
+.error {
+  color: red;
+}
+
+input,
+select {
+  background-color: hsl(0, 0%, 25%);
+  border: none;
+  padding: 0.5em;
+  color-scheme: dark;
+}
+
+input:focus,
+select:focus {
+  outline: hsl(230, 35%, 60%) solid 2px;
+}
+
+button {
+  background-color: hsl(250, 45%, 25%);
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+button:hover {
+  background-color: hsl(250, 45%, 28%);
+}
+
+button:active {
+  background-color: hsl(250, 45%, 25%);
+}
+
+p {
+  margin: 0;
+  margin-bottom: 0.5em;
+  padding: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.adress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+  max-width: 100%;
+}
+
+label {
+  display: flex;
+  gap: 0.5em;
+}
+
+.adress-container label {
+  flex-direction: column;
+  align-items: center;
+  min-width: 9ch;
 }
